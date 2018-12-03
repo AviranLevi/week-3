@@ -1,0 +1,69 @@
+{
+  "animals": {
+    "cow": {
+      "name": "Donetto",
+      "weigh": "1,740kg(3,840 lb)",
+      "country": "Italy",
+      "city": "Arezzo",
+      "endangered": false,
+      "food": {
+        "plant": true,
+        "meat": false
+      },
+      "eatenBy": {
+        "predators": true,
+        "humans": true
+      },
+      "delicious": 5
+    },
+    "elephant": {
+      "name": "Paulo",
+      "weigh": "6000kg(13200lb)",
+      "country": "Kenya",
+      "city": "Mombasa",
+      "endangered": false,
+      "food": {
+        "plant": true,
+        "meat": false
+      },
+      "eatenBy": {
+        "predators": true,
+        "humans": false
+      },
+      "delicious": 2
+    },
+    "grayWolf": {
+      "name": "Muller",
+      "weigh": "38.5kg(85lb)",
+      "country": "Canada",
+      "city": "Montreal",
+      "endangered": true,
+      "food": {
+        "plant": false,
+        "meat": true
+      },
+      "eatenBy": {
+        "predators": true,
+        "humans": false
+      },
+      "delicious": 1
+    },
+    "squirrel": {
+      "name": "Pablo",
+      "weigh": "8kg(18 lb)",
+      "country": "USA",
+      "city": "NYC",
+      "endangered": false,
+      "food": {
+        "plant": false,
+        "meat": false,
+        "nuts":true
+      },
+      "eatenBy": {
+        "predators": true,
+        "humans": true
+      },
+      "delicious": 3
+    }
+  }
+}
