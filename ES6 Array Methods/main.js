@@ -285,7 +285,7 @@ console.log(users.filter(u => u.address.suite === "Apt. 950").map(u => u.name));
 ///////////////
 /*
 const companies = function (user) {
-    console.log(user.name +  " live in " + user.city + " and owns the company " + user.company.name )
+    console.log(user.name +  " live in " + user.address.city + " and owns the company " + user.company.name )
 };
 
 users.forEach(companies);
