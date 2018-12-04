@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ma People</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<h1>MA PEOPLE</h1>
+<div id="peopleList">
+
+</div>
+
+<script id="people-template" type="text/x-handlebars-template">
+    {{#each peopleData}}
+        <div class="div">
+            <p class="p">{{name}}</p>
+            <p class="email"><a href="mailto:{{email}}">{{email}}</a> </p>
+        </div>
+
+    {{/each}}
+</script>
+
+<script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+<script src="main.js"></script>
+</body>
+</html>

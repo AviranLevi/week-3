@@ -87,7 +87,6 @@ const giphy = function () {
 //////////////////////
 //Exercise EXTENSION//
 //////////////////////
-
 /*
 const giphy = function () {
     let input = $("#input");
@@ -100,7 +99,6 @@ const giphy = function () {
             data.data.forEach(g => {
                 return $("#searchDiv").append(`<div><iframe class="frame" src="${g.embed_url}"></iframe><button class="button">ADD THIS GIF</button></div>`);
             });
-
         },
         error: function (xhr, text, error) {
             console.log(text);
