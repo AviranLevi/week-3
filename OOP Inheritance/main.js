@@ -59,11 +59,11 @@ class Principal extends Person {
     }
 
     expelStudent(eStudent) {
-        this.students.splice(eStudent, 1);
+        this.students.splice(this.students.find(s => s.name === eStudent.name), 1);
     }
 
     transferStudent(tStudnet, principal) {
-        this.students.splice(tStudnet, 1);
+        this.students.splice(this.students.find(s => s.name === tStudnet.name), 1);
         principal.students.push(tStudnet);
 
 
