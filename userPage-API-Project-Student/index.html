@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>API Project</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="user-container"></div>
+        <div class="quote-container"></div>
+
+        <div class="pokemon-container"></div>
+        <div class="meat-container"></div>
+
+        <div class="friends-container"></div>
+
+    </div>
+
+
+
+
+    <script id="user-template" type="text/x-handlebars-template">
+        <img id="profile-pic" src="{{picture.large}}" alt="">
+        <div class="user-info">
+            <p>{{toUpper name.first}} {{toUpper name.last}}</p>
+            <p>{{toUpper location.city}}, {{toUpper location.state}}</p>
+        </div>
+
+    </script>
+
+    <script id="user-friends-template" type="text/x-handlebars-template">
+        <h4>Friends</h4>
+        <ul>
+            {{#each users}}
+                <li>{{toUpper name.first}} {{toUpper name.last}}</li>
+            {{/each}}
+        </ul>
+    </script>
+
+    <script id="quote-template" type="text/x-handlebars-template">
+        <div>{{quote}}</div>
+        <div>{{author}}</div>
+    </script>
+
+    <script id="pokemon-template" type="text/x-handlebars-template">
+        <img id="pokemon-image" src="{{sprites.front_default}}" alt="">
+        <p id="pokemon-text">Favorite Pokemon: {{forms.[0].name}}</p>
+    </script>
+
+    <script id="meat-template" type="text/x-handlebars-template">
+        <p>{{meatText}}</p>
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.11/handlebars.js"></script>
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    <script src="Renderer.js"></script>
+    <script src="APIManager.js"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>
