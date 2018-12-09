@@ -11,7 +11,7 @@ body{
     height: 100vh;
     display: grid;
     grid-template-areas:
-        ". h h ."
+        "h h h ."
         ". q q ."
         ". p p f"
         ". t t f";
@@ -20,9 +20,9 @@ body{
 .user-container{
     grid-area: h;
     font-size: 25px;
-    background-color: #3498db;
+    background-color: #393E41;
     padding: 1vmax;
-    border-radius:10px;
+    border-bottom-right-radius:10px;
 }
 .user-info {
     color: #ecf0f1;
@@ -54,7 +54,7 @@ body{
 
 .friends-container{
     grid-area: f;
-    background-color: #3498db;
+    background-color: #393E41;
     font-size: 1.5vmax;
     color: #ecf0f1;
     border-top-left-radius: 4px;

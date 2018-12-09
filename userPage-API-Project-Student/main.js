@@ -1,7 +1,5 @@
-const render = new Renderer();
-const api = new APIManager();
+const renderer = new Renderer();
+const api = new APIManager(renderer);
 api.generateNewPage();
 
-$("#gen-page").on("click", function () {
-   api.generateNewPage();
-});
+$("#gen-page").on("click",() => api.generateNewPage());

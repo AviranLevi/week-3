@@ -1,41 +1,16 @@
 class Renderer {
-    renderUsers(users) {
-        $(".user-container").empty();
-        let source = $('#user-template').html();
-        let template = Handlebars.compile(source);
-        let newHTML = template(users);
-        $(".user-container").append(newHTML);
+    constructor () {
+        Handlebars.registerHelper('toUpper', function (str) {
+            return str.replace(/^\w/, c => c.toUpperCase());
+        });
     }
-    renderFriends(users) {
-        $(".friends-container").empty();
-        let source = $('#user-friends-template').html();
+
+    render (data, container, templateDIV) {
+        $(container).empty();
+        let source = $(templateDIV).html();
         let template = Handlebars.compile(source);
-        let newHTML = template({users});
-        $(".friends-container").append(newHTML);
-    }
-    renderQuote(quoteInfo) {
-        $(".quote-container").empty();
-        let source = $('#quote-template').html();
-        let template = Handlebars.compile(source);
-        let newHTML = template(quoteInfo);
-        $(".quote-container").append(newHTML);
-    }
-    renderPokemon(pokemonInfo) {
-        $(".pokemon-container").empty();
-        let source = $('#pokemon-template').html();
-        let template = Handlebars.compile(source);
-        let newHTML = template(pokemonInfo);
-        $(".pokemon-container").append(newHTML);
-    }
-    renderMeat(meatText) {
-        $(".meat-container").empty();
-        let source = $('#meat-template').html();
-        let template = Handlebars.compile(source);
-        let newHTML = template({meatText});
-        $(".meat-container").append(newHTML);
+        let newHTML = template(data);
+        $(container).append(newHTML);
     }
 }
 
-Handlebars.registerHelper('toUpper', function (str) {
-    return str.replace(/^\w/, c => c.toUpperCase());
-});
